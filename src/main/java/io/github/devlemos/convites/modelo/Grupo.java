@@ -1,4 +1,7 @@
 package io.github.devlemos.convites.modelo;
 
-public class Grupo {
+public record Grupo(
+        Long id,
+        String descricao
+) {
 }
