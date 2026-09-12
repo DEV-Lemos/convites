@@ -1,7 +1,7 @@
 package io.github.devlemos.convites.controlador;
 import io.github.devlemos.convites.validacao.ValidacaoPessoa;
 import io.github.devlemos.convites.servico.ServicoPessoa;
-import io.github.devlemos.convites.modelo.pessoa
+import io.github.devlemos.convites.modelo.Pessoa;
 
 public class ControladorPessoa {
     private final ServicoPessoa servico;
@@ -24,5 +24,9 @@ public class ControladorPessoa {
         return servico.cadastrar(
                 dadosValidados
         );
+    }
+
+    public void listar() {
+        // TODO document why this method is empty
     }
 }

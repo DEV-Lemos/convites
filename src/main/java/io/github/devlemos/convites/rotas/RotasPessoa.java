@@ -11,9 +11,7 @@ public class RotasPessoa{
     }
 
     public void registrar(JavalinConfig config){
-        config.routes.get("/pessoa", ctx ->{
-            controlador.listar();
-        })
+        config.routes.get("/pessoa", ctx -> controlador.listar());
 
 
         config.routes.post("/pessoa", ctx -> {
@@ -23,8 +21,7 @@ public class RotasPessoa{
                             Pessoa.class
                     );
 
-            Convite resposta =
-                    controlador.cadastrar(dados);
+            Pessoa resposta = controlador.cadastrar(dados);
 
             ctx.status(201);
             ctx.json(resposta);
